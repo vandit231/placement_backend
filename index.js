@@ -7,8 +7,6 @@ app.use(express.json());
 app.use(cors())
 app.post('/bfhl', (req, res) => {
     const { data } = req.body;
-
-    // Initialize arrays
     const numbers = [];
     const alphabets = [];
     const lowercaseAlphabets = [];
