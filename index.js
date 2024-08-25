@@ -5,9 +5,8 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://placement-frontend-nine.vercel.app',
-    methods: 'GET,POST,PUT,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
+    origin: '*', // Allow only your frontend domain
+    methods: ['GET', 'POST'], // Allow only GET and POST requests
   }));
 
 app.post('/bfhl', (req, res) => {
